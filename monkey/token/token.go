@@ -8,7 +8,7 @@ type Token struct {
 }
 
 const (
-	ILLEGAL = "ILLEGAL"
+	ILLEGAL = "ILLEGAL" //文字が未知
 	EOF     = "EOF"
 
 	// 識別子 + リテラル
