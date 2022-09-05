@@ -33,3 +33,14 @@ const (
 	LET      = "LET"
 )
 
+var keywords = map[string]TokenType{
+	"fn": FUNCTION,
+	"let":LET,
+}
+
+func LookupIdent(ident string) TokenType { //渡された識別子が実はキーワードではなかったかを確認する
+	if tok, ok := keywords[ident]; ok {
+		return tok
+	}
+	return IDENT
+}
